@@ -15,6 +15,10 @@ return new class extends Migration
 
             $table->foreignId('categoryid')->nullable()->constrained('partner_categories', 'id')->nullOnDelete();
             $table->mediumText('partner_address');
+            $table->string('partner_city')->nullable();
+            $table->string('partner_state')->nullable();
+            $table->string('partner_country')->nullable();
+            $table->string('partner_zipcode')->nullable();
             $table->string('logo')->nullable();
             $table->string('bank_accountnumber')->nullable();
             $table->String('bank_name')->nullable();
